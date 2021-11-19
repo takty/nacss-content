@@ -1,0 +1,72 @@
+/**
+ *
+ * Margin
+ *
+ * @author Takuto Yanagida
+ * @version 2021-11-19
+ *
+ */
+
+
+%child-margin {
+	*:first-child:not(:where(.aligncenter, .alignwide, .alignfull)) {  // 0, 1, 0
+		margin-block-start: 0;
+	}
+
+	*:first-child:where(.alignright, .alignleft) + * {  // 0, 1, 0
+		margin-block-start: 0;
+	}
+
+	*:last-child:not(:where(.alignright, .alignleft, .aligncenter, .alignwide, .alignfull))  {  // 0, 1, 0
+		margin-block-end: 0;
+	}
+}
+
+@mixin custom-property {
+	--nc-margin-small         : 1rem;
+	--nc-margin-large         : 2rem;
+	--nc-margin-heading-offset: -1rem;
+
+	--nc-margin-h1: 3.5rem 3.0rem;
+	--nc-margin-h2: 3.0rem 2.5rem;
+	--nc-margin-h3: 2.5rem 2.0rem;
+	--nc-margin-h4: 2.0rem 1.5rem;
+	--nc-margin-h5: 1.5rem 1.0rem;
+	--nc-margin-h6: 1.0rem 1.0rem;
+}
+
+@mixin main {
+	@extend %child-margin;
+
+	:where(
+		blockquote, pre,
+		ul, ol, dl,
+		figure,
+		table, hr
+	) {
+		margin-block: var(--nc-margin-large);
+	}
+
+	:where(p, div) {
+		margin-block: var(--nc-margin-small);
+	}
+
+	h1 { margin-block: var(--nc-margin-h1); }
+	h2 { margin-block: var(--nc-margin-h2); }
+	h3 { margin-block: var(--nc-margin-h3); }
+	h4 { margin-block: var(--nc-margin-h4); }
+	h5 { margin-block: var(--nc-margin-h5); }
+	h6 { margin-block: var(--nc-margin-h6); }
+
+	:where(h1, h2, h3, h4, h5, h6) + :where(h1, h2, h3, h4, h5, h6) {
+		margin-block-start: var(--nc-margin-heading-offset);
+	}
+
+	:where(
+		.column-2, .column-3, .column-4,
+		.card-2, .card-3, .card-4,
+		.tab-scroll, .tab-stack
+	) {
+		margin-block: var(--nc-margin-large);
+	}
+}

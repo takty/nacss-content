@@ -1,0 +1,110 @@
+/**
+ *
+ * Inline
+ *
+ * @author Takuto Yanagida
+ * @version 2021-11-19
+ *
+ */
+
+
+@mixin custom-property {
+	--nc-content-u-line-color : #ee0a;
+	--nc-content-u-line-color2: #ee07;
+	--nc-content-u-line-width : 0.375em;
+	--nc-content-u-line-offset: calc(var(--nc-content-u-line-width) / 2);
+
+	--nc-content-del-line-color: #f40a;
+	--nc-content-del-line-width: 2px;
+
+	--nc-content-small-font-size: 87.5%;
+	--nc-content-big-font-size  : 125%;
+
+	--nc-content-mark-line-color : #ef0a;
+	--nc-content-mark-line-color2: #ef07;
+	--nc-content-mark-line-mark  : 0.9em;
+
+	--nc-content-abbr-line-color: #12fa;
+	--nc-content-abbr-line-width: 2px;
+}
+
+@mixin main {
+	strong, b {
+		font-weight: bold;  // For Firefox.
+	}
+
+	i, cite, em, address, dfn {  // Fix italic.
+		font-style: normal;
+		text-decoration: dotted underline 2px;
+	}
+
+	u, ins, span[data-nc-underline] {  // Fix underline.
+		text-decoration: none;
+		background     : {
+			image   : linear-gradient(to right, var(--nc-content-u-line-color) 0%, var(--nc-content-u-line-color2) 100%);
+			size    : 100% var(--nc-content-u-line-width, 0.375em);
+			position: left bottom var(--nc-content-u-line-offset);
+			repeat  : no-repeat;
+		}
+	}
+
+	s, strike, del {
+		text-decoration: line-through solid var(--nc-content-del-line-color) var(--nc-content-del-line-width);
+	}
+
+	code, kbd, samp, var {
+		margin-inline: 0.125em;
+	}
+
+	small {
+		font-size: var(--nc-content-small-font-size);
+	}
+
+	big {
+		font-size: var(--nc-content-big-font-size);
+	}
+
+	sub, sup {
+		position      : relative;
+		display       : inline-block;  // For neat line height in Safari.
+		vertical-align: baseline;
+		line-height   : 1;
+		margin-inline : 0.125em;
+	}
+
+	sub {
+		bottom       : -0.25em;
+		margin-bottom: -0.25em;
+	}
+
+	sup {
+		top       : -0.75em;
+		margin-top: -0.75em;
+	}
+
+	mark {
+		background: {
+			color   : transparent;
+			image   : linear-gradient(to right, var(--nc-content-mark-line-color) 0%, var(--nc-content-mark-line-color2) 100%);
+			size    : 100% var(--nc-content-mark-line-mark);
+			position: left center;
+			repeat  : no-repeat;
+		}
+	}
+
+	abbr[title] {
+		text-decoration: underline dotted var(--nc-content-abbr-line-color) var(--nc-content-abbr-line-width);
+	}
+
+	rt {
+		transform: translateY(0.125em);
+	}
+
+	img,
+	iframe {
+		max-width: 100%;
+		height   : auto;
+
+		break-inside: avoid;
+	}
+}

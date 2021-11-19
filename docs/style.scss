@@ -1,0 +1,48 @@
+html {
+	scroll-behavior   : smooth;
+	scroll-padding-top: 8rem;
+
+	font-family: sans-serif;
+	line-height: 1.75;
+}
+
+header,
+main {
+	margin-inline: auto;
+	width : min(calc(100% - 2vw), 48rem);
+}
+
+header {
+	position  : sticky;
+	top       : 0;
+	z-index   : 1;
+	min-height: 6rem;
+
+	border          : 1px solid #ddd;
+	background-color: rgba(#fff, 0.5);
+	backdrop-filter : blur(4px);
+}
+
+main {
+	margin-top: 2rem;
+}
+
+div.blank {
+	height: 10vh;
+	background-image: repeating-linear-gradient(-45deg, transparent, transparent 6px, #defa 6px, #defa 12px);
+}
+
+.alignleft,
+.alignright {
+	margin-block: 0 2rem;
+}
+
+.alignleft {
+	float: left;
+	margin-inline-end: 2rem;
+}
+
+.alignright {
+	float: right;
+	margin-inline-start: 2rem;
+}

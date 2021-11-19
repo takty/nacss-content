@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Inline - nacss-content</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/content.min.css?v231346t">
+<link rel="stylesheet" href="css/style.min.css?v231346t">
+<script src="js/content.min.js?v231346t"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const is = document.getElementsByTagName('img');
+		window['NACSS'].contentImageAlt(is);
+		const figs = document.getElementsByTagName('figure');
+		window['NACSS'].contentFigureCaption(figs);
+		const ifs = document.getElementsByTagName('iframe');
+		window['NACSS'].contentIframeAspect(ifs);
+		const ss = document.getElementsByTagName('span');
+		window['NACSS'].contentUnderline(ss);
+	});
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>Inline</h1>
+		<nav><a href="index.html">Go back</a></nav>
+	</header>
+
+	<main>
+		<h2>Strong, B, Em, U, Underline, Mark, Small</h2>
+
+		<dl>
+			<dt>&lt;strong&gt;, &lt;b&gt;</dt><dd><strong>The Strong Importance element</strong> and <b>The Bring Attention To element</b></dd>
+			<dt>&lt;em&gt;, &lt;cite&gt;</dt><dd><em>The Emphasis element</em> and <cite>The Citation element</cite></dd>
+			<dt>&lt;u&gt;, &lt;span style="text-decoration: underline;"&gt;</dt><dd><u>The Unarticulated Annotation</u> and <span style="text-decoration: underline;">underline text</span></dd>
+			<dt>&lt;mark&gt;</dt><dd><mark>The Mark Text element</mark></dd>
+			<dt>&lt;small&gt;</dt><dd>(Normal) <small>The small element represents side comments</small></dd>
+		</dl>
+
+		<h2>Sub, Sup, Abbr, Del</h2>
+
+		<p> Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text<sub>subscript</sub>   Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text</p>
+		<p> Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text<sup>superscript</sup> Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text Normal Text</p>
+		<p><abbr title="Abbreviation">The Abbreviation element</abbr></p>
+		<p><del>The Deleted Text element</del></p>
+
+		<h2>Code, Var, Samp, Kbd</h2>
+
+		<p><code>The Inline Code element</code></p>
+		<p><kbd>The Keyboard Input element</kbd></p>
+		<p><samp>The Sample Output element</samp></p>
+
+		<p><var>The Variable element</var></p>
+
+		<p>Equation <var>E</var>=<var>m</var><var>c</var><sup>2</sup>.</p>
+
+		<h2>Ruby</h2>
+
+		<p><ruby>Ruby<rt>Ruby Text</rt></ruby></p>
+		<p><ruby>日本語<rt>にほんご</rt></ruby></p>
+
+		<h2>Iframe</h2>
+
+		<p style="text-align:center;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe>
+		</p>
+	</main>
+</body>
+</html>

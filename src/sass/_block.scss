@@ -1,0 +1,101 @@
+/**
+ *
+ * Block
+ *
+ * @author Takuto Yanagida
+ * @version 2021-11-19
+ *
+ */
+
+
+@use 'utility';
+
+
+@mixin custom-property {
+	--nc-content-hr-rule-border: var(--rule-border, 2px solid #777);
+
+	--nc-content-blockquote-rule-border  : var(--rule-border, 2px solid #777);
+	--nc-content-blockquote-min-width    : 36rem;
+	--nc-content-blockquote-indent-width : 3rem;
+	--nc-content-blockquote-indent-shrink: 1.5rem;
+
+	--nc-content-pre-background: var(--background, #7774);
+	--nc-content-pre-padding   : 1.75rem 2rem;
+}
+
+@mixin main {
+	p,
+	div:where(:not([class])) {
+		text-align: left;
+		hyphens   : auto;
+	}
+
+	hr {
+		border    : none;
+		border-top: var(--nc-content-hr-rule-border);
+	}
+
+	blockquote {
+		margin-inline: 0;
+		padding-left: utility.bp(
+			calc(var(--nc-content-blockquote-indent-width) - var(--nc-content-blockquote-indent-shrink)),
+			var(--nc-content-blockquote-indent-width),
+			var(--nc-content-blockquote-min-width),
+		);
+
+		position: relative;
+		&::before {
+			content : '';
+			position: absolute;
+			left    : 0;
+			height  : 100%;
+
+			border-right: var(--nc-content-blockquote-rule-border);
+			width       : utility.bp(
+				1px,
+				calc(var(--nc-content-blockquote-indent-width) / 2),
+				var(--nc-content-blockquote-min-width)
+			);
+		}
+
+		font-style: normal;
+
+		> cite {
+			display   : block;
+			text-align: left;
+			font-style: normal;
+		}
+	}
+
+	pre {
+		background-color: var(--nc-content-pre-background);
+		padding         : var(--nc-content-pre-padding);
+
+		overflow-x: auto;
+
+		> code {
+			background-color: transparent;
+			white-space     : pre;
+		}
+	}
+}
+
+@mixin heading {
+	h1, h2, h3, h4, h5, h6 {
+		font-feature-settings: 'pkna' 1;
+		hyphens: auto;
+
+		overflow-wrap: break-word;
+
+		> small { display: block; }
+		span {
+			display        : inline-block;
+			text-decoration: inherit;
+		}
+		div {
+			line-height: inherit;
+			text-align : inherit;
+		}
+		break-after: avoid;
+	}
+}

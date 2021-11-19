@@ -1,0 +1,39 @@
+/**
+ *
+ * Content
+ *
+ * @author Takuto Yanagida
+ * @version 2021-11-19
+ *
+ */
+
+
+@use 'inline';
+@use 'block';
+@use 'figure';
+@use 'margin';
+@use 'print';
+@use 'broken-image';
+
+
+:root {
+	@include inline.custom-property;
+	@include block.custom-property;
+	@include figure.custom-property;
+	@include margin.custom-property;
+	@include print.custom-property;
+	@include broken-image.custom-property;
+
+	@media print {
+		@include print.main;
+	}
+}
+
+main {
+	@include inline.main;
+	@include block.main;
+	@include block.heading;
+	@include figure.main;
+	@include margin.main;
+	@include broken-image.main;
+}

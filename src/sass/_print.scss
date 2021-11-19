@@ -1,0 +1,21 @@
+/**
+ *
+ * Print
+ *
+ * @author Takuto Yanagida
+ * @version 2021-11-19
+ *
+ */
+
+
+@mixin custom-property {
+	--nc-print-font-size: 9pt;
+}
+
+@mixin main {
+	font-size: var(--nc-print-font-size);
+	* {
+		-webkit-print-color-adjust: exact;
+		color-adjust              : exact;
+	}
+}

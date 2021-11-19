@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Block - nacss-content</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/content.min.css?v231346t">
+<link rel="stylesheet" href="css/style.min.css?v231346t">
+<script src="js/content.min.js?v231346t"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const is = document.getElementsByTagName('img');
+		window['NACSS'].contentImageAlt(is);
+		const figs = document.getElementsByTagName('figure');
+		window['NACSS'].contentFigureCaption(figs);
+		const ifs = document.getElementsByTagName('iframe');
+		window['NACSS'].contentIframeAspect(ifs);
+		const ss = document.getElementsByTagName('span');
+		window['NACSS'].contentUnderline(ss);
+	});
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>Block</h1>
+		<nav><a href="index.html">Go back</a></nav>
+	</header>
+
+	<main>
+
+		<h2>P</h2>
+
+		<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible
+			vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly
+			domed and divided by arches into stiff sections.</p>
+		<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin
+			compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.
+			It wasn't a dream. </p>
+		<p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole
+			of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
+
+		<h2>Hr</h2>
+
+		<hr>
+
+		<h2>Blockquote</h2>
+
+		<blockquote>
+			<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible
+				vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly
+				domed and divided by arches into stiff sections.</p>
+			<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin
+				compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.
+				It wasn't a dream. </p>
+			<cite>Cite Element</cite>
+		</blockquote>
+
+		<h2>Pre</h2>
+
+		<pre>Preformatted text
+Preformatted text
+<code>code element</code>, <code>code element</code></pre>
+
+	</main>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Image - nacss-content</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/content.min.css?v231346t">
+<link rel="stylesheet" href="css/style.min.css?v231346t">
+<script src="js/content.min.js?v231346t"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const is = document.getElementsByTagName('img');
+		window['NACSS'].contentImageAlt(is);
+		const figs = document.getElementsByTagName('figure');
+		window['NACSS'].contentFigureCaption(figs);
+		const ifs = document.getElementsByTagName('iframe');
+		window['NACSS'].contentIframeAspect(ifs);
+		const ss = document.getElementsByTagName('span');
+		window['NACSS'].contentUnderline(ss);
+	});
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>Image</h1>
+		<nav><a href="index.html">Go back</a></nav>
+	</header>
+
+	<main>
+		<h2>Images</h2>
+
+		<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible
+			vermin.
+			<img src="https://picsum.photos/180/120.jpg" width="180" height="120" alt="Sample Image">
+			He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly
+			domed and divided by arches into stiff sections.
+			<img src="https://example.com/image.jpg" width="300" height="200" alt="Broken Image Link with 'alt' Attribute">
+			The bedding was hardly able to cover it and seemed ready to slide off any moment.
+			"What's happened to me?" he thought.
+			<img src="https://example.com/image.jpg" width="300" height="200" alt="">
+			His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as
+			he looked.</p>
+
+		<h2>Images in Figures</h2>
+
+		<figure>
+			<img src="https://picsum.photos/300/200.jpg" width="300" height="200">
+		</figure>
+
+		<figure>
+			<img src="https://example.com/image.jpg" width="300" height="200" alt="Broken Image Link with 'alt' Attribute">
+			<figcaption>Broken Image Link with 'alt' Attribute.</figcaption>
+		</figure>
+
+		<figure>
+			<img src="https://example.com/image.jpg" width="300" height="200" alt="">
+			<figcaption>Broken Image Link without 'alt' Attribute.</figcaption>
+		</figure>
+	</main>
+</body>
+</html>
