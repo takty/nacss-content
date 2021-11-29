@@ -31,13 +31,13 @@
 	}
 
 	hr {
-		border    : none;
-		border-top: var(--nc-content-hr-rule-border);
+		border            : none;
+		border-block-start: var(--nc-content-hr-rule-border);
 	}
 
 	blockquote {
-		margin-inline: 0;
-		padding-left: utility.bp(
+		margin-inline       : 0;
+		padding-inline-start: utility.bp(
 			calc(var(--nc-content-blockquote-indent-width) - var(--nc-content-blockquote-indent-shrink)),
 			var(--nc-content-blockquote-indent-width),
 			var(--nc-content-blockquote-min-width),
@@ -45,13 +45,15 @@
 
 		position: relative;
 		&::before {
-			content : '';
-			position: absolute;
-			left    : 0;
-			height  : 100%;
+			content: '';
 
-			border-right: var(--nc-content-blockquote-rule-border);
-			width       : utility.bp(
+			position          : absolute;
+			inset-inline-start: 0;
+			height            : 100%;
+
+			border-inline-end: var(--nc-content-blockquote-rule-border);
+
+			width: utility.bp(
 				1px,
 				calc(var(--nc-content-blockquote-indent-width) / 2),
 				var(--nc-content-blockquote-min-width)
