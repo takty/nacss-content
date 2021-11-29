@@ -3,7 +3,7 @@
  * Block
  *
  * @author Takuto Yanagida
- * @version 2021-11-19
+ * @version 2021-11-29
  *
  */
 
@@ -26,7 +26,7 @@
 @mixin main {
 	p,
 	div:where(:not([class])) {
-		text-align: left;
+		text-align: start;
 		hyphens   : auto;
 	}
 
@@ -62,7 +62,7 @@
 
 		> cite {
 			display   : block;
-			text-align: left;
+			text-align: start;
 			font-style: normal;
 		}
 	}
