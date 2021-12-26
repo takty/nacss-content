@@ -21,10 +21,10 @@ main {
 
 @media print {
 	:root {
-		@include print.property-print;
+		@include content.property-print;
 	}
 
 	main {
-		@include print.print;
+		@include content.print;
 	}
 }
