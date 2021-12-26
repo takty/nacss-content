@@ -23,7 +23,7 @@
 	--nc-content-pre-padding   : 1.75rem 2rem;
 }
 
-@mixin block {
+@mixin block($do-reset: true) {
 	p,
 	div:where(:not([class])) {
 		text-align: start;
@@ -31,7 +31,9 @@
 	}
 
 	hr {
-		border            : none;  // For reset
+		@if $do-reset {
+			border: none;  // For reset
+		}
 		border-block-start: var(--nc-content-hr-rule-border);
 	}
 

@@ -28,7 +28,7 @@
 	--nc-content-abbr-line-width: 2px;
 }
 
-@mixin inline {
+@mixin inline($do-reset: true) {
 	strong, b {
 		font-weight: bold;  // For Firefox.
 	}
@@ -44,7 +44,9 @@
 			image   : linear-gradient(to right, var(--nc-content-u-line-color) 0%, var(--nc-content-u-line-color2) 100%);
 			size    : 100% var(--nc-content-u-line-width, 0.375em);
 			position: left bottom var(--nc-content-u-line-offset);
-			repeat  : no-repeat;  // For reset
+		}
+		@if $do-reset {
+			background-repeat: no-repeat;  // For reset
 		}
 	}
 
@@ -88,7 +90,9 @@
 			image   : linear-gradient(to right, var(--nc-content-mark-line-color) 0%, var(--nc-content-mark-line-color2) 100%);
 			size    : 100% var(--nc-content-mark-line-mark);
 			position: left center;
-			repeat  : no-repeat;  // For reset
+		}
+		@if $do-reset {
+			background-repeat: no-repeat;  // For reset
 		}
 	}
 
@@ -102,9 +106,10 @@
 
 	img,
 	iframe {
-		max-width: 100%;  // For reset
-		height   : auto;  // For reset
-
+		@if $do-reset {
+			max-width: 100%;  // For reset
+			height   : auto;  // For reset
+		}
 		break-inside: avoid;
 	}
 }
