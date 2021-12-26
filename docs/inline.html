@@ -4,19 +4,20 @@
 <meta charset="utf-8">
 <title>Inline - nacss-content</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/content.min.css?v231331t">
-<link rel="stylesheet" href="css/style.min.css?v231331t">
-<script src="js/content.min.js?v231331t"></script>
+<link rel="stylesheet" href="css/reset.min.css?v221912t">
+<link rel="stylesheet" href="css/content.min.css?v221912t">
+<link rel="stylesheet" href="css/style.min.css?v221912t">
+<script src="js/content.min.js?v221912t"></script>
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
 		const is = document.getElementsByTagName('img');
-		window['NACSS'].contentImageAlt(is);
+		window['NACSS'].content.applyImageAlt(is);
 		const figs = document.getElementsByTagName('figure');
-		window['NACSS'].contentFigureCaption(figs);
+		window['NACSS'].content.applyFigureCaption(figs);
 		const ifs = document.getElementsByTagName('iframe');
-		window['NACSS'].contentIframeAspect(ifs);
+		window['NACSS'].content.applyIframeAspect(ifs);
 		const ss = document.getElementsByTagName('span');
-		window['NACSS'].contentUnderline(ss);
+		window['NACSS'].content.applyUnderline(ss);
 	});
 </script>
 </head>
