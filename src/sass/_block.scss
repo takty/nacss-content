@@ -31,7 +31,7 @@
 	}
 
 	hr {
-		border            : none;
+		border            : none;  // For reset
 		border-block-start: var(--nc-content-hr-rule-border);
 	}
 
@@ -84,8 +84,8 @@
 
 @mixin heading {
 	h1, h2, h3, h4, h5, h6 {
+		hyphens              : auto;
 		font-feature-settings: 'pkna' 1;
-		hyphens: auto;
 
 		overflow-wrap: break-word;
 

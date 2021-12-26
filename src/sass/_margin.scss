@@ -31,8 +31,8 @@
 	--nc-margin-h2: 3.0rem 2.5rem;
 	--nc-margin-h3: 2.5rem 2.0rem;
 	--nc-margin-h4: 2.0rem 1.5rem;
-	--nc-margin-h5: 1.5rem 1.0rem;
-	--nc-margin-h6: 1.0rem 1.0rem;
+	--nc-margin-h5: 2.0rem 1.5rem;
+	--nc-margin-h6: 2.0rem 1.5rem;
 }
 
 @mixin margin {
@@ -58,7 +58,7 @@
 	h5 { margin-block: var(--nc-margin-h5); }
 	h6 { margin-block: var(--nc-margin-h6); }
 
-	:where(h1, h2, h3, h4, h5, h6) + :where(h1, h2, h3, h4, h5, h6) {
+	:where(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) {
 		margin-block-start: var(--nc-margin-heading-offset);
 	}
 
