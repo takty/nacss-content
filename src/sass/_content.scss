@@ -29,10 +29,6 @@
 	@include figure.property-figure;
 	@include margin.property-margin;
 	@include broken-image.property-broken-image;
-
-	@media print {
-		@include print.property-print;
-	}
 }
 
 @mixin all {
@@ -42,8 +38,4 @@
 	@include figure.figure;
 	@include margin.margin;
 	@include broken-image.broken-image;
-
-	@media print {
-		@include print.print;
-	}
 }

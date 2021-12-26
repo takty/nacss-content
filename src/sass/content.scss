@@ -18,3 +18,13 @@
 main {
 	@include content.all;
 }
+
+@media print {
+	:root {
+		@include print.property-print;
+	}
+
+	main {
+		@include print.print;
+	}
+}
