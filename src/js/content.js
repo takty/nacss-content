@@ -3,38 +3,35 @@
  * Content
  *
  * @author Takuto Yanagida
- * @version 2021-12-07
+ * @version 2021-12-26
  *
  */
 
 
 'use strict';
 
-window['NACSS'] = window['NACSS'] || {};
+window['NACSS']            = window['NACSS']            || {};
+window['NACSS']['content'] = window['NACSS']['content'] || {};
 
 
-(function (NS) {
+((NS) => {
 
+	// @include __style-class.js
 	{
 		// @include _image-alt.js
-		NS.contentImageAlt = initialize;
+		NS.applyImageAlt = apply;
 	}
-
 	{
 		// @include _figure-caption.js
-		NS.contentFigureCaption = initialize;
+		NS.applyFigureCaption = apply;
 	}
-
 	{
 		// @include _iframe-aspect.js
-		NS.contentIframeAspect = initialize;
+		NS.applyIframeAspect = apply;
 	}
-
 	{
 		// @include _underline.js
-		NS.contentUnderline = initialize;
+		NS.applyUnderline = apply;
 	}
 
-	// @include _style-class.js
-
-})(window['NACSS']);
+})(window['NACSS']['content']);

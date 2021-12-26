@@ -3,12 +3,12 @@
  * Iframe Aspect
  *
  * @author Takuto Yanagida
- * @version 2021-11-19
+ * @version 2021-12-26
  *
  */
 
 
-function initialize(fs) {
+function apply(fs) {
 	for (const f of fs) {
 		if (!f.style.aspectRatio) {
 			const [w, h] = extractIframeSize(f);

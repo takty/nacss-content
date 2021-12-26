@@ -3,13 +3,13 @@
  * Figure Caption
  *
  * @author Takuto Yanagida
- * @version 2021-11-19
+ * @version 2021-12-26
  *
  */
 
 
 // Wrap figure captions with spans for Firefox
-function initialize(figs) {
+function apply(figs) {
 	const ua = window.navigator.userAgent.toLowerCase();
 	if (ua.includes('firefox')) {
 		for (const fig of figs) {

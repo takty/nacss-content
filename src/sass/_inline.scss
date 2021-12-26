@@ -3,12 +3,12 @@
  * Inline
  *
  * @author Takuto Yanagida
- * @version 2021-11-29
+ * @version 2021-12-26
  *
  */
 
 
-@mixin custom-property {
+@mixin property-inline {
 	--nc-content-u-line-color : #ee0a;
 	--nc-content-u-line-color2: #ee07;
 	--nc-content-u-line-width : 0.375em;
@@ -28,7 +28,7 @@
 	--nc-content-abbr-line-width: 2px;
 }
 
-@mixin main {
+@mixin inline {
 	strong, b {
 		font-weight: bold;  // For Firefox.
 	}

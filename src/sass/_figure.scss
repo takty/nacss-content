@@ -3,17 +3,17 @@
  * Figure
  *
  * @author Takuto Yanagida
- * @version 2021-11-29
+ * @version 2021-12-26
  *
  */
 
 
-@mixin custom-property {
+@mixin property-figure {
 	--nc-content-figure-caption-max-width: 90%;
 	--nc-content-figure-caption-min-width: 8rem;
 }
 
-@mixin main {
+@mixin figure {
 	figure {
 		margin-inline: 0;
 		max-width    : 100%;

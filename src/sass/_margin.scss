@@ -3,7 +3,7 @@
  * Margin
  *
  * @author Takuto Yanagida
- * @version 2021-11-19
+ * @version 2021-12-26
  *
  */
 
@@ -22,7 +22,7 @@
 	}
 }
 
-@mixin custom-property {
+@mixin property-margin {
 	--nc-margin-small         : 1rem;
 	--nc-margin-large         : 2rem;
 	--nc-margin-heading-offset: -1rem;
@@ -35,7 +35,7 @@
 	--nc-margin-h6: 1.0rem 1.0rem;
 }
 
-@mixin main {
+@mixin margin {
 	@extend %child-margin;
 
 	:where(

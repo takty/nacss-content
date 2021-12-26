@@ -3,12 +3,12 @@
  * Image Alt
  *
  * @author Takuto Yanagida
- * @version 2021-11-19
+ * @version 2021-12-26
  *
  */
 
 
-function initialize(ts) {
+function apply(ts) {
 	for (const t of ts) {
 		if (!t.alt && t.src) {
 			let src = t.src.trim();

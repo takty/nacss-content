@@ -3,12 +3,12 @@
  * Underline
  *
  * @author Takuto Yanagida
- * @version 2021-11-19
+ * @version 2021-12-26
  *
  */
 
 
-function initialize(spans, opts = {}) {
+function apply(spans, opts = {}) {
 	opts = Object.assign({
 		styleList: ':ncUnderline',
 	}, opts);

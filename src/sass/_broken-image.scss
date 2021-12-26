@@ -3,17 +3,17 @@
  * Broken Image
  *
  * @author Takuto Yanagida
- * @version 2021-11-19
+ * @version 2021-12-26
  *
  */
 
 
-@mixin custom-property {
+@mixin property-broken-image {
 	--nc-broken-image-color: #f004;
 }
 
 // Broken images (does not work on Safari)
-@mixin main {
+@mixin broken-image {
 	img {
 		position: relative;
 		&::after {

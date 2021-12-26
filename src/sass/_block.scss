@@ -3,15 +3,15 @@
  * Block
  *
  * @author Takuto Yanagida
- * @version 2021-11-29
+ * @version 2021-12-26
  *
  */
 
 
-@use 'utility';
+@use '__utility' as utility;
 
 
-@mixin custom-property {
+@mixin property-block {
 	--nc-content-hr-rule-border: var(--rule-border, 2px solid #777);
 
 	--nc-content-blockquote-rule-border  : var(--rule-border, 2px solid #777);
@@ -23,7 +23,7 @@
 	--nc-content-pre-padding   : 1.75rem 2rem;
 }
 
-@mixin main {
+@mixin block {
 	p,
 	div:where(:not([class])) {
 		text-align: start;
