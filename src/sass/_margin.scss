@@ -3,7 +3,7 @@
  * Margin
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
+ * @version 2021-12-27
  *
  */
 
@@ -65,7 +65,8 @@
 	:where(
 		.column-2, .column-3, .column-4,
 		.card-2, .card-3, .card-4,
-		.tab-scroll, .tab-stack
+		.tab-scroll, .tab-stack,
+		.pseudo-tab-page, .tab-page  // For compatibility
 	) {
 		margin-block: var(--nc-margin-large);
 	}
