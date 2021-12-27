@@ -10,13 +10,13 @@
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
 		const is = document.getElementsByTagName('img');
-		window['NACSS'].content.applyImageAlt(is);
+		NACSS.content.applyImageAlt(is);
 		const figs = document.getElementsByTagName('figure');
-		window['NACSS'].content.applyFigureCaption(figs);
+		NACSS.content.applyFigureCaption(figs);
 		const ifs = document.getElementsByTagName('iframe');
-		window['NACSS'].content.applyIframeAspect(ifs);
+		NACSS.content.applyIframeAspect(ifs);
 		const ss = document.getElementsByTagName('span');
-		window['NACSS'].content.applyUnderline(ss);
+		NACSS.content.applyUnderline(ss);
 	});
 </script>
 </head>
