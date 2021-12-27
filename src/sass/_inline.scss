@@ -3,7 +3,7 @@
  * Inline
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
+ * @version 2021-12-27
  *
  */
 
@@ -33,8 +33,8 @@
 		font-weight: bold;  // For Firefox.
 	}
 
-	cite, address, dfn {  // Fix italic.
-		font-style: normal;
+	cite, dfn {  // Fix italic.
+		font-style     : normal;
 		text-decoration: dotted underline 2px;
 	}
 

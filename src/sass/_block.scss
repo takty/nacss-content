@@ -3,7 +3,7 @@
  * Block
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
+ * @version 2021-12-27
  *
  */
 
@@ -81,6 +81,10 @@
 			background-color: transparent;
 			white-space     : pre;
 		}
+	}
+
+	address {  // Fix italic.
+		font-style: normal;
 	}
 }
 
