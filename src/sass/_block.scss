@@ -3,7 +3,7 @@
  * Block
  *
  * @author Takuto Yanagida
- * @version 2021-12-27
+ * @version 2022-01-06
  *
  */
 
@@ -15,6 +15,7 @@
 	--nc-content-hr-rule-border: var(--rule-border, 2px solid #777);
 
 	--nc-content-blockquote-rule-border  : var(--rule-border, 2px solid #777);
+	--nc-content-blockquote-rule-offset  : 0.25em;  // Offset for line height
 	--nc-content-blockquote-min-width    : 36rem;
 	--nc-content-blockquote-indent-width : 3rem;
 	--nc-content-blockquote-indent-shrink: 1.5rem;
@@ -51,7 +52,8 @@
 
 			position          : absolute;
 			inset-inline-start: 0;
-			height            : 100%;
+			inset-block-start : var(--nc-content-blockquote-rule-offset);
+			height            : calc(100% - 2 * var(--nc-content-blockquote-rule-offset));
 
 			border-inline-end: var(--nc-content-blockquote-rule-border);
 
