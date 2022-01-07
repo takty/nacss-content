@@ -3,7 +3,7 @@
  * Content
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
+ * @version 2022-01-07
  *
  */
 
@@ -16,7 +16,7 @@
 }
 
 main {
-	@include content.all;
+	@include content.all(true /* $do-reset */);
 }
 
 @media print {
