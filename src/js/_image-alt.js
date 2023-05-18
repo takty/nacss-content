@@ -1,12 +1,9 @@
 /**
- *
  * Image Alt
  *
  * @author Takuto Yanagida
  * @version 2021-12-26
- *
  */
-
 
 function apply(ts) {
 	for (const t of ts) {

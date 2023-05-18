@@ -1,15 +1,11 @@
 /**
- *
  * Block
  *
  * @author Takuto Yanagida
  * @version 2022-01-06
- *
  */
 
-
 @use '__utility' as utility;
-
 
 @mixin property-block {
 	--nc-content-hr-rule-border: var(--rule-border, 2px solid #777);

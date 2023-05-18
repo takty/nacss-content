@@ -1,12 +1,9 @@
 /**
- *
  * Iframe Aspect
  *
  * @author Takuto Yanagida
  * @version 2023-05-18
- *
  */
-
 
 function apply(fs) {
 	for (const f of fs) {

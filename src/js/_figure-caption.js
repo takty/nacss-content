@@ -1,12 +1,9 @@
 /**
- *
  * Figure Caption
  *
  * @author Takuto Yanagida
  * @version 2022-10-13
- *
  */
-
 
 // Wrap figure captions with spans for Firefox
 function apply(figs) {

@@ -1,12 +1,9 @@
 /**
- *
  * Margin
  *
  * @author Takuto Yanagida
  * @version 2022-06-30
- *
  */
-
 
 %child-margin {
 	*:first-child:not(:where(.aligncenter, .alignwide, .alignfull)) {  // 0, 1, 0

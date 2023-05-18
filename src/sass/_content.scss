@@ -1,12 +1,9 @@
 /**
- *
  * Content
  *
  * @author Takuto Yanagida
  * @version 2022-06-28
- *
  */
-
 
 @forward 'inline';
 @forward 'block';
@@ -21,7 +18,6 @@
 @use 'margin';
 @use 'print';
 @use 'broken-image';
-
 
 @mixin property {
 	@include inline.property-inline;

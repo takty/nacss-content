@@ -1,12 +1,9 @@
 /**
- *
  * Underline
  *
  * @author Takuto Yanagida
  * @version 2021-12-27
- *
  */
-
 
 function apply(spans, opts = {}) {
 	opts = Object.assign({
