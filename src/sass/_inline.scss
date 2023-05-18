@@ -2,7 +2,7 @@
  * Inline
  *
  * @author Takuto Yanagida
- * @version 2022-05-31
+ * @version 2023-05-18
  */
 
 @mixin property-inline {
@@ -31,8 +31,9 @@
 	}
 
 	cite, dfn {  // Fix italic.
-		font-style     : normal;
-		text-decoration: dotted underline 2px;
+		font-style               : normal;
+		text-decoration          : dotted underline;
+		text-decoration-thickness: 2px;  // For Safari.
 	}
 
 	u, ins, span[data-nc-underline] {  // Fix underline.
@@ -48,7 +49,9 @@
 	}
 
 	s, strike, del {
-		text-decoration: line-through solid var(--nc-content-del-line-color) var(--nc-content-del-line-width);
+		        text-decoration  : line-through solid var(--nc-content-del-line-color);
+		-webkit-text-decoration  : line-through solid var(--nc-content-del-line-color);  // For Safari.
+		text-decoration-thickness: var(--nc-content-del-line-width);  // For Safari.
 	}
 
 	code, kbd, samp, var {
@@ -94,7 +97,9 @@
 	}
 
 	abbr[title] {
-		text-decoration: underline dotted var(--nc-content-abbr-line-color) var(--nc-content-abbr-line-width);
+		        text-decoration  : underline dotted var(--nc-content-abbr-line-color);
+		-webkit-text-decoration  : underline dotted var(--nc-content-abbr-line-color);  // For Safari.
+		text-decoration-thickness: var(--nc-content-abbr-line-width);  // For Safari.
 	}
 
 	rt {
