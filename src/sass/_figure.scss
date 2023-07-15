@@ -2,7 +2,7 @@
  * Figure
  *
  * @author Takuto Yanagida
- * @version 2022-10-13
+ * @version 2023-07-15
  */
 
 @mixin property-figure {
@@ -30,7 +30,8 @@
 		width        : fit-content;
 		max-width    : var(--nc-content-figure-caption-max-width);
 
-		font-size: 87.25%;
+		text-align: left;
+		font-size : 87.25%;
 	}
 
 	* + figcaption {
