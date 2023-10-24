@@ -2,7 +2,7 @@
  * Block
  *
  * @author Takuto Yanagida
- * @version 2022-01-06
+ * @version 2023-10-24
  */
 
 @use '__utility' as utility;
@@ -21,8 +21,7 @@
 }
 
 @mixin block($do-reset: true) {
-	p,
-	div:where(:not([class])) {
+	:where(p, div:not([class])) {
 		text-align: start;
 		hyphens   : auto;
 	}
