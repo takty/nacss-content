@@ -28,6 +28,7 @@ function setAspectRatio(f) {
 	const [w, h] = extractIframeSize(f);
 	if (w && h) {
 		f.style.aspectRatio = `${w} / ${h}`;
+		f.style.height      = 'auto';
 	}
 }
 

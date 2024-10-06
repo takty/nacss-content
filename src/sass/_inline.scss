@@ -2,7 +2,7 @@
  * Inline
  *
  * @author Takuto Yanagida
- * @version 2023-05-18
+ * @version 2024-10-06
  */
 
 @mixin property-inline {
@@ -118,9 +118,5 @@
 		@if $do-reset {
 			height: auto;  // For reset
 		}
-	}
-
-	iframe {
-		height: auto;
 	}
 }
