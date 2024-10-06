@@ -2,7 +2,7 @@
  * Iframe Aspect
  *
  * @author Takuto Yanagida
- * @version 2023-05-18
+ * @version 2024-10-06
  */
 
 function apply(fs) {
@@ -32,6 +32,9 @@ function setAspectRatio(f) {
 }
 
 function extractIframeSize(f) {
+	const uW = f.width.replace(/[0-9]/g, '');
+	const uH = f.height.replace(/[0-9]/g, '');
+	if (uW !== uH) return [0, 0];
 	let w = parseInt(f.width);
 	let h = parseInt(f.height);
 	if (w && h) return [w, h];
